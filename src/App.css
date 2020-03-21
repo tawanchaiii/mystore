@@ -20,7 +20,9 @@ h2 {
 }
 p {
   font-size: 16px;
+  align-content: center;
 }
+
 a {
   border-bottom: 1px solid white;
   color: #0076ff;
@@ -41,4 +43,29 @@ pre {
 code:before,
 code:after {
   content: '\`';
+}
+.middle{
+  text-align: center;
+  align-content: center;
+}
+.k{
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav{
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+}
+.l{
+  margin-top: 50px ;
+  width: 50%;
+}
+.nav-link{
+  text-align: center;
 }
