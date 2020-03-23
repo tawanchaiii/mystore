@@ -2,12 +2,8 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import mac from './asset/mac.png';
-import surface from './asset/Image 1.png';
-import swift from './asset/Image 2.png';
-import xps from './asset/xps.png';
-import zen from './asset/Image 3.png';
-
+import { Link } from 'react-router-dom'
+import Routing from './routes'
 function App() {
   const [date, setDate] = useState(null);
   useEffect(() => {
@@ -27,32 +23,27 @@ function App() {
       <div class="nav">
         <ul class="nav justify-content-center">
           <li style={styles} class="nav-item">
-            <a class="nav-link" href="macbook.js">Macbook</a>
+            <Link exact to="/" class="nav-link" >Home</Link>
           </li>
           <li style={styles} class="nav-item">
-            <a class="nav-link" href="#">Surface</a>
+            <Link to="/mac" class="nav-link" >Macbook</Link>
           </li>
           <li style={styles} class="nav-item">
-            <a class="nav-link" href="#">Swift</a>
+            <Link to="/surface" class="nav-link">Surface</Link>
           </li>
           <li style={styles} class="nav-item">
-            <a class="nav-link" href="#">XPS</a>
+            <Link to="/swift" class="nav-link" >Swift</Link>
           </li>
           <li style={styles} class="nav-item">
-            <a class="nav-link" href="#">ZenBook</a>
+            <Link to="/xps" class="nav-link" >XPS</Link>
+          </li>
+          <li style={styles} class="nav-item">
+            <Link to="/zen" class="nav-link" >ZenBook</Link>
           </li>
         </ul>
       </div>
-      <br/><br/><br/>
-      <h1 class="middle">Macbook Pro</h1>
-      <h6 class="middle">Prolong in the dark</h6> <br/>
-     
-      <img class="k" src={mac} alt="mac" /> 
-      <img class="l" src={surface} alt="surface" />
-      <img class="l" src={swift} alt="swift" />
-      <img class="l" src={xps} alt="xps" />
-      <img class="l" src={zen} alt="zen" />
-      <br />
+      
+      <Routing />
     </div>
 
 
